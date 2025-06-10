@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-light text-dark;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 px-4 md:px-8 lg:px-16;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center;
+  }
+} 
