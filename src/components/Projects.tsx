@@ -11,39 +11,11 @@ const Projects = () => {
       link: 'https://github.com/sujanmagr/Bare-Style'
     },
     {
-      title: 'Hamro Destination',
-      description: 'A tourism website for Nepal built with HTML/CSS, showcasing various destinations and travel information.',
-      tech: ['HTML', 'CSS'],
-      type: 'Web Development'
-    },
-    {
-      title: 'LabTestSystem',
-      description: 'An ASP.NET Core project for managing laboratory records and test results efficiently.',
-      tech: ['ASP.NET Core', 'C#', 'SQL'],
-      type: 'Full Stack'
-    },
-    {
       title: 'Ekantipur Automation',
       description: 'Automated testing suite for Ekantipur News website, covering login, signup, and article writing functionalities.',
       tech: ['Selenium', 'Python'],
       type: 'QA Automation',
       link: 'https://github.com/sujanmagr/News-Site-Testing'
-    },
-    {
-      title: 'JMeter Performance Testing',
-      description: 'Comprehensive performance testing report with detailed analysis and summary graphs.',
-      tech: ['JMeter', 'Performance Testing'],
-      type: 'QA Testing'
-    }
-  ];
-
-  const pythonProjects = [
-    {
-      title: 'Slot Machine Game',
-      description: 'An interactive slot machine game with betting functionality and random number generation.',
-      tech: ['Python', 'Random Module'],
-      type: 'Python',
-      link: 'https://github.com/sujanmagr/Slot-Machine'
     },
     {
       title: 'Story Generator',
@@ -58,6 +30,22 @@ const Projects = () => {
       tech: ['Python', 'Random Module'],
       type: 'Python',
       link: 'https://github.com/sujanmagr/Python-Mini-Projects'
+    }
+  ];
+
+  const pythonProjects = [
+    {
+      title: 'Slot Machine Game',
+      description: 'An interactive slot machine game with betting functionality and random number generation.',
+      tech: ['Python', 'Random Module'],
+      type: 'Python',
+      link: 'https://github.com/sujanmagr/Slot-Machine'
+    },
+    {
+      title: 'JMeter Performance Testing',
+      description: 'Comprehensive performance testing report with detailed analysis and summary graphs.',
+      tech: ['JMeter', 'Performance Testing'],
+      type: 'QA Testing'
     }
   ];
 
