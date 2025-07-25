@@ -16,19 +16,20 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+      <div className="container-custom px-2 md:px-12 lg:px-2">
+        <div className="flex items-center justify-between h-16 relative w-full">
+          {/* Logo */}
           <Link
             to="hero"
-            className="text-xl font-bold text-primary cursor-pointer"
+            className="text-2xl md:text-3xl font-bold text-primary cursor-pointer"
             smooth={true}
             duration={500}
           >
-            SB
+            SACHIN B.
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 mr-8 lg:mr-16">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -36,6 +37,7 @@ const Navbar = () => {
                 className="text-dark hover:text-primary cursor-pointer transition-colors"
                 smooth={true}
                 duration={500}
+                offset={-64}
               >
                 {item.name}
               </Link>
@@ -44,8 +46,9 @@ const Navbar = () => {
 
           {/* Mobile Navigation Button */}
           <button
-            className="md:hidden"
+            className="md:hidden z-50 p-2"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
           >
             {isOpen ? (
               <XMarkIcon className="h-6 w-6" />
@@ -55,23 +58,22 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Mobile Navigation Menu - Fullscreen Overlay */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.to}
-                  className="block px-3 py-2 text-dark hover:text-primary cursor-pointer transition-colors"
-                  smooth={true}
-                  duration={500}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+          <div className="absolute right-2 top-16 mt-2 w-48 bg-white rounded-lg shadow-lg z-50 py-2 animate-fadeIn">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.to}
+                className="block px-4 py-3 text-dark hover:text-primary text-base font-medium transition-colors"
+                smooth={true}
+                duration={500}
+                offset={-64}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
         )}
       </div>

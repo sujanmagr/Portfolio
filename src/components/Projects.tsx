@@ -8,7 +8,8 @@ const Projects = () => {
       description: 'A full-featured e-commerce platform for clothes and accessories with search functionality, wishlist, and dummy payment system.',
       tech: ['React.js', 'JavaScript', 'CSS', 'HTML'],
       type: 'Web Development',
-      link: 'https://github.com/sujanmagr/Bare-Style'
+      link: 'https://github.com/sujanmagr/Bare-Style',
+      demo: 'https://bare-style.vercel.app/'
     },
     {
       title: 'Ekantipur Automation',
@@ -16,6 +17,24 @@ const Projects = () => {
       tech: ['Selenium', 'Python'],
       type: 'QA Automation',
       link: 'https://github.com/sujanmagr/News-Site-Testing'
+    },
+    {
+      title: 'YatriGhar',
+      description: 'A fullstack MERN homestay booking system for Nepal, featuring AI-powered hotel recommendation and review analyzer.',
+      tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'AI'],
+      type: 'Fullstack Web',
+      link: '', // Add GitHub or live link if available
+      demo: '' // Add live demo link if available
+    }
+  ];
+
+  const pythonProjects = [
+    {
+      title: 'Slot Machine Game',
+      description: 'An interactive slot machine game with betting functionality and random number generation.',
+      tech: ['Python', 'Random Module'],
+      type: 'Python',
+      link: 'https://github.com/sujanmagr/Slot-Machine'
     },
     {
       title: 'Story Generator',
@@ -30,22 +49,6 @@ const Projects = () => {
       tech: ['Python', 'Random Module'],
       type: 'Python',
       link: 'https://github.com/sujanmagr/Python-Mini-Projects'
-    }
-  ];
-
-  const pythonProjects = [
-    {
-      title: 'Slot Machine Game',
-      description: 'An interactive slot machine game with betting functionality and random number generation.',
-      tech: ['Python', 'Random Module'],
-      type: 'Python',
-      link: 'https://github.com/sujanmagr/Slot-Machine'
-    },
-    {
-      title: 'JMeter Performance Testing',
-      description: 'Comprehensive performance testing report with detailed analysis and summary graphs.',
-      tech: ['JMeter', 'Performance Testing'],
-      type: 'QA Testing'
     }
   ];
 
@@ -88,16 +91,28 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-primary hover:text-primary/80 transition-colors"
-                  >
-                    View Project →
-                  </a>
-                )}
+                <div className="flex gap-4 mt-4">
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-primary hover:text-primary/80 transition-colors font-medium"
+                    >
+                      Code
+                    </a>
+                  )}
+                  {project.demo && project.demo !== '' && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-primary hover:text-primary/80 transition-colors font-medium"
+                    >
+                      Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -139,16 +154,18 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-primary hover:text-primary/80 transition-colors"
-                  >
-                    View Project →
-                  </a>
-                )}
+                <div className="flex gap-4 mt-4">
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-primary hover:text-primary/80 transition-colors font-medium"
+                    >
+                      Code
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}

@@ -61,7 +61,7 @@ const Contact = () => {
           Contact Me
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -91,7 +91,7 @@ const Contact = () => {
               </a>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-4">
               <a
                 href="https://github.com/sujanmagr"
                 target="_blank"
@@ -117,7 +117,10 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white rounded-2xl shadow-xl p-8 md:p-10 w-full max-w-lg mx-auto space-y-6 border border-gray-100"
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-dark mb-1">
                   Name
@@ -128,7 +131,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 bg-gray-50 hover:bg-gray-100"
                   required
                 />
               </div>
@@ -143,7 +146,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 bg-gray-50 hover:bg-gray-100"
                   required
                 />
               </div>
@@ -158,14 +161,14 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 bg-gray-50 hover:bg-gray-100"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="btn-primary w-full"
+                className="btn-primary w-full py-3 text-lg rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
                 disabled={status.submitting}
               >
                 {status.submitting ? 'Sending...' : 'Send Message'}
