@@ -28,7 +28,7 @@ const Resume = () => {
           </p>
 
           <a
-            href="/sachin-budhathoki.pdf"
+            href="/Sachin_Budhathoki_CV.pdf"
             download
             className="inline-flex items-center gap-2 btn-primary"
           >
