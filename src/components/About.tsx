@@ -14,7 +14,7 @@ const About = () => {
   const highlights = [
     {
       icon: <FaCheckCircle />,
-      value: '1+',
+      value: '2+',
       label: 'Year of QA Experience',
     },
     {
@@ -83,7 +83,7 @@ const About = () => {
               {/* Role */}
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-                  Junior QA Engineer
+                   QA Engineer
                 </span>
 
                 <span className="flex items-center gap-2 text-sm text-gray-500">
@@ -204,7 +204,7 @@ const About = () => {
                   </span>
 
                   <span className="text-primary font-medium">
-                    2025 – Present
+                    2024 – Present
                   </span>
                 </div>
 
